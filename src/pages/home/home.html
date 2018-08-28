@@ -1,0 +1,138 @@
+
+<ion-header>
+    <page-common-header [header]="header_data"></page-common-header>
+    <!--<ion-card>
+        <ion-row nowrap>
+            <ion-title class="col bodRightBar">
+                <ion-avatar item-left>
+                      <img src="assets/imgs/pwc_logo.png" />
+                  <ion-img width="80" height="80" cache="true" [src]="Pwcimage"></ion-img>
+                </ion-avatar>
+              </ion-title>
+              <ion-title class="col fontWeighterbar">
+                {{AppHeading}}
+                <span class="subHeadingBar">{{UserName}}</span>
+              </ion-title>
+              <ion-title class="col">
+                  <ion-avatar item-left>
+                      <img src="assets/imgs/mgi_logo.png" />
+                    <ion-img width="80" height="80" cache="true" [src]="Clientimage"></ion-img>
+                  </ion-avatar>
+              </ion-title>
+        </ion-row>
+        
+    </ion-card>
+    <ion-navbar class="menuBgcol">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <section class="pull-right ion-bell">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        </section>
+        <ion-title>{{AppHeading}}</ion-title>
+      </ion-navbar>-->
+</ion-header>
+
+<ion-content padding class="home">
+    <!--<button ion-button secondary  (click)="showConfirm()">Toggle Menu</button>-->
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content 
+        pullingIcon="arrow-dropdown"
+        pullingText="Pull to refresh"
+        refreshingSpinner="circles"
+        refreshingText="Refreshing...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+    <div class = "row marBtm10" *ngFor="let item of this.Myarray" (click)="NavigateToPage(item.KPI_Description)">
+      <!--First Panel Coding-->
+      <div class = "col {{item.bgClass}} box-shadow">
+        <section class="pull-left bodLeftBar BigFontAlign">{{item.KPI_Value}}</section>
+        <section class="pull-left width100">
+          <span class="SubTextFontSize">{{item.KPI_Description}}</span>
+          <span class="caretIconBar">
+            <i class="{{item.icons}} fontSizerBig"></i>
+            <span class="SubTextFontSize">{{item.change}}</span>
+          </span>
+        </section>
+      </div>
+      <!--First Panel Coding-->
+   </div>
+
+
+
+
+
+    <!--<div class = "row marBtm10" (click)="showConfirm()">
+        First Panel Coding
+        <div class = "col panelFirstBox box-shadow">
+          <section class="pull-left bodLeftBar BigFontAlign">10</section>
+          <section class="pull-left width100">
+            <span class="SubTextFontSize">is today's run rate reported</span>
+            <span class="caretIconBar">
+              <i class="fa fa-caret-down fontSizerBig"></i>
+              <span class="SubTextFontSize">2.40%</span>
+            </span>
+          </section>
+        </div>
+        First Panel Coding
+     </div>-->
+     <!--<div class = "row marBtm10">
+        Second Panel Coding
+        <div class = "col panelFirstBox panelSecondBox box-shadow">
+          <section class="pull-left bodLeftBar BigFontAlign">19</section>
+          <section class="pull-left width100">
+            <span class="SubTextFontSize">is the overall Days sale Outstanding</span>
+            <span class="caretIconBar">
+              <i class="fa fa-caret-up fontSizerBig"></i>
+              <span class="SubTextFontSize">3.49%</span>
+            </span>
+          </section>
+        </div>
+        Second Panel Coding
+     </div>-->
+     <!--<div class = "row marBtm10">
+        Third Panel Coding
+        <div class = "col panelFirstBox panelThirdBox box-shadow">
+          <section class="pull-left bodLeftBar BigFontAlign">22</section>
+          <section class="pull-left width100">
+            <span class="SubTextFontSize">is the Daily sell through ratio</span>
+            <span class="caretIconBar">
+              <i class="fa fa-caret-up fontSizerBig"></i>
+              <span class="SubTextFontSize">3.49%</span>
+            </span>
+          </section>
+        </div>
+        Third Panel Coding
+     </div>-->
+     <!--<div class = "row marBtm10">
+        Fourth Panel Coding
+        <div class = "col panelFirstBox panelFourthBox box-shadow">
+          <section class="pull-left bodLeftBar BigFontAlign">37%</section>
+          <section class="pull-left width100">
+            <span class="SubTextFontSize">increase in laggards and 15% decrease in stars</span>
+            <span class="caretIconBar">
+              <i class="fa fa-caret-up fontSizerBig"></i>
+              <span class="SubTextFontSize"></span>
+            </span>
+          </section>
+        </div>
+        Fourth Panel Coding
+     </div>-->
+     <!--<div class = "row marBtm10">
+        Fifth Panel Coding
+        <div class = "col panelFirstBox panelSixthBox box-shadow">
+          <section class="pull-left bodLeftBar BigFontAlign">19</section>
+          <section class="pull-left width100">
+            <span class="SubTextFontSize">is the avg Inventory holding across all plants today</span>
+            <span class="caretIconBar">
+              <i class="fa fa-caret-up fontSizerBig"></i>
+              <span class="SubTextFontSize">2.40%</span>
+            </span>
+          </section>
+        </div>
+        Fifth Panel Coding
+     </div>-->
+     
+  <!--<button ion-button secondary menuToggle>Toggle Menu</button>-->
+</ion-content>

@@ -1,0 +1,32 @@
+
+    <ion-card>
+        <ion-row nowrap>
+            <ion-title class="col bodRightBar">
+                <ion-avatar item-left>
+                      <img src="assets/imgs/pwc_logo.png" />
+                  <!--<ion-img width="80" height="80" cache="true" [src]="Pwcimage"></ion-img>-->
+                </ion-avatar>
+              </ion-title>
+              <ion-title class="col fontWeighterbar">
+                {{AppHeading}}
+                <span class="subHeadingBar">{{UserName}}</span>
+              </ion-title>
+              <ion-title class="col">
+                  <ion-avatar item-left>
+                      <img src="assets/imgs/mgi_logo.png" />
+                    <!--<ion-img width="80" height="80" cache="true" [src]="Clientimage"></ion-img>-->
+                  </ion-avatar>
+              </ion-title>
+        </ion-row>
+        
+    </ion-card>
+    <ion-navbar class="menuBgcol">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <section class="pull-right ion-bell">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        </section>
+        <!--<ion-title>{{AppHeading}}</ion-title>-->
+      </ion-navbar>
+

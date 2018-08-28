@@ -1,0 +1,73 @@
+@import "GlobalVariable.scss";
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transform($transform){
+    -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+@mixin box-shadow($top, $left, $blur, $color) {
+      -webkit-box-shadow:$top $left $blur $color;
+      -moz-box-shadow:$top $left $blur $color;
+      box-shadow:$top $left $blur $color;
+}
+
+@mixin position($position,$top,$left,$right,$bottom){
+ position:$position;
+ top:$top;
+ left:$left;
+ right:$right;
+ bottom:$bottom;
+}
+@mixin Opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+@mixin box-sizing($boxSizing){
+    box-sizing:$boxSizing;
+        -webkit-box-sizing:$boxSizing;
+        -moz-box-sizing:$boxSizing;
+}
+@mixin padding($top,$right,$bottom,$left){
+    padding-top:$top;
+    padding-right:$right;
+    padding-bottom:$bottom;
+    padding-left:$left;
+}
+@mixin margin($top,$right,$bottom,$left){
+    margin-top:$top;
+    margin-right:$right;
+    margin-bottom:$bottom;
+    margin-left:$left;
+}
+
+@mixin WidthHeight($width, $height,$displayCell){
+    width:$width;
+    height:$height;
+    display:$displayCell;
+}
+@mixin width($width){
+    width:$width;
+}
+@mixin height($height){
+    height:$height;
+}
+@mixin inheritMargin($marginLeft,$display,$flexDirection){
+        margin-left:$marginLeft;
+        display:$display;
+        flex-direction:$flexDirection;
+    }
+@mixin BodMixer($color,$lineHeight,$boder,$OutLine,$boxShadow){
+    color:$color;
+    line-height:$lineHeight;
+    border:$boder;
+    outline:$OutLine;
+    box-shadow:$boxShadow;
+}

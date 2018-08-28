@@ -1,0 +1,115 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/*Global App Mixin css Style Here*/
+$boxcolor:#e0dcdc;
+$bodLeftColor:#fff;
+$hamburgerMenuBg:#0e80c2;
+$UserNameColor:#1080c2;
+$bodRightColor:#ddd;
+$toastBg:#912333;
+$ionSubheader:#515152;
+@mixin bgColor($bgcol){
+    background-color: $bgcol;
+}
+@mixin width100($width){
+    width:$width;
+}
+@mixin Flex($flex){
+    display: $flex;
+}
+@mixin caretIconBar($marTop,$display,$textAlign){
+    margin-top: $marTop;
+    display: $display;
+    text-align: $textAlign;
+}
+@mixin linear-gradient($direction, $color-stops) {
+    background: nth(nth($color-stops, 1), 1);
+    background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+    background: linear-gradient($direction, $color-stops);
+  }  
+@mixin padding($top,$right,$bottom,$left){
+    padding-top:$top;
+    padding-right:$right;
+    padding-bottom:$bottom;
+    padding-left:$left;
+}
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+      -webkit-box-shadow:inset $top $left $blur $color;
+      -moz-box-shadow:inset $top $left $blur $color;
+      box-shadow:inset $top $left $blur $color;
+    } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+    }
+  }
+  @mixin border-right($bodRight){
+      border-right: $bodRight;
+  }
+  /*Global App Mixin css Style Here*/
+  .fontWeighterbar{
+    .toolbar-title-ios{
+        font-weight: normal;
+        font-size: 4vw;
+    }
+}
+.bodRightBar{
+    border-right:1px solid $bodRightColor;
+}
+.subHeadingBar{
+    float: left;
+    font-size: 14px;
+    color: $UserNameColor;
+}
+.ion-ios-menu:before{
+    color: $bodLeftColor;
+}        
+.menuBgcol{
+    .toolbar-background{
+        @include bgColor($hamburgerMenuBg);
+    }
+}
+.row{
+    .marBtm10{
+        margin-bottom: 10px;
+    }
+    
+}
+.pull-left{
+    float: left;
+    @include padding(15px,15px,15px,15px);
+    color:$bodLeftColor;
+    font-size: 15px;
+}
+.pull-right{
+    float: right;
+}
+.ion-bell{
+    @include width100(16%);
+    .fa-bell{
+        font-size: 6vw;
+        color: $bodLeftColor;
+    }
+}
+.bodLeftBar{
+    @include border-right(1px solid $bodLeftColor)
+}
+.bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default{
+    color: $bodLeftColor
+}

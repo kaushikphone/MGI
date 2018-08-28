@@ -1,0 +1,55 @@
+
+.scroll-content{
+    /*@include padding(16px!important,4px!important,16px!important,4px!important);
+    margin-top: 36%!important;
+    border-top:none!important;*/
+    
+}
+ion-app.ios [padding] .scroll-content{
+    @include padding(5px,5px,5px,5px);
+}
+
+page-home {
+    
+ .panelFirstBox{
+    @include linear-gradient(#00bcd1, #008e9e);
+    @include padding(0,0,0,0);
+    @include Flex(flex);
+    cursor: pointer;
+    margin-bottom: 5px;
+    .BigFontAlign{
+        font-size: 7vw;
+        @include width100(26%);
+    }
+    .SubTextFontSize{
+        font-size: 4vw;
+    }
+ }
+ .panelSecondBox{
+    @include linear-gradient(#5e2220, #5e2220);
+ }
+ .panelThirdBox{
+    @include linear-gradient(#d93b55, #912333);
+ }
+ .panelFourthBox{
+    @include linear-gradient(#ed9015, #cc7c14);
+ }
+ .panelSixthBox{
+    @include linear-gradient(#787572, #999791);
+ }
+ .width100{
+     @include width100(100%);
+ }
+ .caretIconBar{
+    @include caretIconBar(-2px,block,right);
+    .fontSizerBig{
+        font-size: 22px;
+    }
+ }
+ .box-shadow{
+     box-shadow: -1px 2px 0px 0px $boxcolor;
+     -webkit-box-shadow: -1px 2px 0px 0px $boxcolor;
+     -moz-box-shadow: -1px 2px 0px 0px $boxcolor;
+ }
+ 
+}

@@ -1,0 +1,13 @@
+{
+  "name": "MGI",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies":[
+    {
+      "path": "/api/MeghnaMobileAPI/GetMeghnaKPIDetails",
+      "proxyUrl": "http://35.153.5.27:8002"
+}
+  ],
+  "type": "ionic-angular"
+}

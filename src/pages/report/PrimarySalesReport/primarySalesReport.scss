@@ -1,0 +1,13 @@
+.subHeaderComponenet{
+    .toolbar-background-ios{
+        background-color:$ionSubheader;
+    }
+    .toolbar-title-ios{
+        color:$bodLeftColor;
+        font-weight: normal;
+        text-align: left;
+    }
+}
+.toolbar-ios ion-title{
+    padding-left: 18px;
+}
